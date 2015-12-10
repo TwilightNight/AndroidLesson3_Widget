@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/default_padding"
+    android:paddingBottom="@dimen/default_padding"
+    android:paddingLeft="60dp"
+    android:paddingRight="60dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/activity_button_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Push one button"/>
+    <Button
+        android:id="@+id/activity_button_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Regular button"/>
+    <ToggleButton
+        android:id="@+id/activity_button_toggle_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="OFF"/>
+    <ImageButton
+        android:id="@+id/activity_button_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@android:drawable/presence_audio_online"/>
+    <CheckBox
+        android:id="@+id/activity_button_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Android is awesome"/>
+    <RadioGroup
+        android:id="@+id/activity_button_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RadioButton
+            android:id="@+id/activity_button_radio_button1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Android"/>
+        <RadioButton
+            android:id="@+id/activity_button_radio_button2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="IOS"/>
+        <RadioButton
+            android:id="@+id/activity_button_radio_button3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="NOKIA"/>
+    </RadioGroup>
+</LinearLayout>
