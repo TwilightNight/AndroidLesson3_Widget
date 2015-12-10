@@ -29,6 +29,8 @@ public class EditActivity extends Activity {
         setContentView(R.layout.activity_edit);
         ButterKnife.bind(this);
 
+        editText.setText("Test~");
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.languages, android.R.layout.simple_dropdown_item_1line);
         autoCompleteTextView.setAdapter(adapter);
         multiAutoCompleteTextView.setAdapter(adapter);
