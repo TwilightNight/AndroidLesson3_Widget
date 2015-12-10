@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="60dp">
+    <EditText
+        android:id="@+id/activity_edit_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <AutoCompleteTextView
+        android:id="@+id/activity_edit_auto_complete_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <MultiAutoCompleteTextView
+        android:id="@+id/activity_edit_multi_auto_complete_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <Spinner
+        android:id="@+id/activity_edit_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+</LinearLayout>
