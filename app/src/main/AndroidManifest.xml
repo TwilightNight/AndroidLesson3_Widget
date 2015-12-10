@@ -15,6 +15,16 @@
         </activity>
         <activity android:name=".ButtonActivity"/>
         <activity android:name=".EditActivity"/>
+        <activity android:name=".ClockActivity"/>
+        <activity android:name=".ChronometerActivity"/>
+        <activity android:name=".DateTimePickerActivity"/>
+        <activity android:name=".GalleryActivity"/>
+        <activity android:name=".GridActivity"/>
+        <activity android:name=".MiscActivity"/>
+        <activity android:name=".PopupActivity"/>
+        <activity android:name=".ProgressActivity"/>
+        <activity android:name=".SpinnerActivity"/>
+        <activity android:name=".VideoActivity"/>
     </application>
 
 </manifest>

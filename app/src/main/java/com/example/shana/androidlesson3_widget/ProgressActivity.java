@@ -5,5 +5,5 @@ import android.app.Activity;
 /**
  * Created by shana on 2015/12/10.
  */
-public class ProgerssActivity extends Activity {
+public class ProgressActivity extends Activity {
 }

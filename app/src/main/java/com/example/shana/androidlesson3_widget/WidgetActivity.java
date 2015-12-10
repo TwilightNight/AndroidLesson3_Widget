@@ -18,7 +18,7 @@ public class WidgetActivity extends Activity {
             "Button", ButtonActivity.class,
             "Edit", EditActivity.class,
             "Clock", ClockActivity.class,
-            "Progress", ProgerssActivity.class,
+            "Progress", ProgressActivity.class,
             "Date/Time Picker", DateTimePickerActivity.class,
             "Chronometer", ChronometerActivity.class,
             "Popup", PopupActivity.class,
