@@ -20,7 +20,7 @@ import butterknife.OnClick;
  */
 public class DateTimePickerActivity extends Activity {
     @Bind(R.id.activity_date_time_picker_date_text_view)
-    TextView dayTextView;
+    TextView dateTextView;
     @Bind(R.id.activity_date_time_picker_time_text_view)
     TextView timeTextView;
 
@@ -30,7 +30,7 @@ public class DateTimePickerActivity extends Activity {
         new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                dayTextView.setText(year + "/" + monthOfYear + "/" + dayOfMonth);
+                dateTextView.setText(year + "/" + monthOfYear + "/" + dayOfMonth);
             }
         }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
