@@ -1,4 +1,4 @@
-package com.example.shana.androidlesson3_widget;
+package com.example.shana.androidlesson3_widget.subpage;
 
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
@@ -14,6 +14,8 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 import android.os.Handler;
+
+import com.example.shana.androidlesson3_widget.R;
 
 import java.util.ArrayList;
 import java.util.List;

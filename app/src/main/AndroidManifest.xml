@@ -13,18 +13,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ButtonActivity"/>
-        <activity android:name=".EditActivity"/>
-        <activity android:name=".ClockActivity"/>
-        <activity android:name=".ChronometerActivity"/>
-        <activity android:name=".DateTimePickerActivity"/>
-        <activity android:name=".GalleryActivity"/>
-        <activity android:name=".GridActivity"/>
-        <activity android:name=".MiscActivity"/>
-        <activity android:name=".PopupActivity"/>
-        <activity android:name=".ProgressActivity"/>
-        <activity android:name=".SpinnerActivity"/>
-        <activity android:name=".VideoActivity"/>
+        <activity android:name=".subpage.ButtonActivity"/>
+        <activity android:name=".subpage.EditActivity"/>
+        <activity android:name=".subpage.ClockActivity"/>
+        <activity android:name=".subpage.ChronometerActivity"/>
+        <activity android:name=".subpage.DateTimePickerActivity"/>
+        <activity android:name=".subpage.GalleryActivity"/>
+        <activity android:name=".subpage.GridActivity"/>
+        <activity android:name=".subpage.MiscActivity"/>
+        <activity android:name=".subpage.PopupActivity"/>
+        <activity android:name=".subpage.ProgressActivity"/>
+        <activity android:name=".subpage.SpinnerActivity"/>
+        <activity android:name=".subpage.VideoActivity"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.shana.androidlesson3_widget;
+package com.example.shana.androidlesson3_widget.subpage;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
+import com.example.shana.androidlesson3_widget.R;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

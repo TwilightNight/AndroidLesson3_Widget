@@ -1,10 +1,12 @@
-package com.example.shana.androidlesson3_widget;
+package com.example.shana.androidlesson3_widget.subpage;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.shana.androidlesson3_widget.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,7 +24,7 @@ public class SpinnerActivity extends Activity {
     void onSpinnerSelectItem(){
         textView.setText("You selected planet is " + spinner.getSelectedItem().toString());
     }
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

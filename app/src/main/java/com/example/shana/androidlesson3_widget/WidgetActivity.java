@@ -6,6 +6,19 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.shana.androidlesson3_widget.subpage.ButtonActivity;
+import com.example.shana.androidlesson3_widget.subpage.ChronometerActivity;
+import com.example.shana.androidlesson3_widget.subpage.ClockActivity;
+import com.example.shana.androidlesson3_widget.subpage.DateTimePickerActivity;
+import com.example.shana.androidlesson3_widget.subpage.EditActivity;
+import com.example.shana.androidlesson3_widget.subpage.GalleryActivity;
+import com.example.shana.androidlesson3_widget.subpage.GridActivity;
+import com.example.shana.androidlesson3_widget.subpage.MiscActivity;
+import com.example.shana.androidlesson3_widget.subpage.PopupActivity;
+import com.example.shana.androidlesson3_widget.subpage.ProgressActivity;
+import com.example.shana.androidlesson3_widget.subpage.SpinnerActivity;
+import com.example.shana.androidlesson3_widget.subpage.VideoActivity;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnItemClick;

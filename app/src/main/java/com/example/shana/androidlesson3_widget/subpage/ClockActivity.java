@@ -1,8 +1,10 @@
-package com.example.shana.androidlesson3_widget;
+package com.example.shana.androidlesson3_widget.subpage;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.shana.androidlesson3_widget.R;
 
 import java.util.Calendar;
 

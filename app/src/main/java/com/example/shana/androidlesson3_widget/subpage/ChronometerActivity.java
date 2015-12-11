@@ -1,10 +1,12 @@
-package com.example.shana.androidlesson3_widget;
+package com.example.shana.androidlesson3_widget.subpage;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.widget.Button;
 import android.widget.Chronometer;
+
+import com.example.shana.androidlesson3_widget.R;
 
 import butterknife.BindString;
 import butterknife.ButterKnife;
