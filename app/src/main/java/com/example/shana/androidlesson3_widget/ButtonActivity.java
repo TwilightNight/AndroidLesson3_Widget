@@ -20,8 +20,9 @@ public class ButtonActivity extends Activity {
     TextView textView;
     @Bind(R.id.activity_button_radio_group)
     RadioGroup radioGroup;
+
     @OnClick(R.id.activity_button_button)
-    void onRegularButtonClick(){
+    void onRegularButtonClick() {
         textView.setText("onRegularButtonClick");
     }
 
