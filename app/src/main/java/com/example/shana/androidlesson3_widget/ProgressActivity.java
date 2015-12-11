@@ -21,56 +21,34 @@ public class ProgressActivity extends Activity {
     ProgressBar progressBar;
     @Bind(R.id.activity_progress_text_view)
     TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress);
         ButterKnife.bind(this);
+        beginLoading();
+    }
 
-        final Runnable runnable1 = new Runnable() {
-            @Override
-            public void run() {
-                progressBar.incrementSecondaryProgressBy(1);
-                setSecondaryProgress(100*progressBar.getSecondaryProgress());
-            }
-        };
-
-        final Runnable runnable2 = new Runnable() {
-            @Override
-            public void run() {
-                progressBar.incrementProgressBy(10);
-                progressBar.incrementSecondaryProgressBy(-100);
-                setSecondaryProgress(100*progressBar.getSecondaryProgress());
-            }
-        };
-
-        final Runnable runnable3 = new Runnable() {
-            @Override
-            public void run() {
-                textView.setVisibility(View.GONE);
-                progressBar.setVisibility(View.GONE);
-                imageView.setVisibility(View.VISIBLE);
-            }
-        };
-
+    private void beginLoading(){
         final Handler handler = new Handler();
-        Thread thread = new Thread() {
+        handler.post(new Runnable() {
             @Override
             public void run() {
-                try {
-                    for (int i = 0; i < progressBar.getMax() / 10; i++) {
-                        for (int j = 0; j < progressBar.getMax(); j++) {
-                            Thread.sleep(10);
-                            handler.post(runnable1);
-                        }
-                        handler.post(runnable2);
-                    }
-                    handler.post(runnable3);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                if (progressBar.getSecondaryProgress() < progressBar.getMax()) {
+                    handler.postDelayed(this, 10);
+                    progressBar.incrementSecondaryProgressBy(1);
+                } else if (progressBar.getProgress() < progressBar.getMax()) {
+                    handler.postDelayed(this, 10);
+                    progressBar.incrementProgressBy(20);
+                    progressBar.setSecondaryProgress(0);
+                } else {
+                    textView.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.GONE);
+                    imageView.setVisibility(View.VISIBLE);
                 }
             }
-        };
-        thread.start();
+        });
     }
+
 }
