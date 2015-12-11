@@ -36,12 +36,12 @@ public class ProgressActivity extends Activity {
             @Override
             public void run() {
                 if (progressBar.getSecondaryProgress() < progressBar.getMax()) {
-                    handler.postDelayed(this, 10);
                     progressBar.incrementSecondaryProgressBy(1);
-                } else if (progressBar.getProgress() < progressBar.getMax()) {
                     handler.postDelayed(this, 10);
+                } else if (progressBar.getProgress() < progressBar.getMax()) {
                     progressBar.incrementProgressBy(20);
                     progressBar.setSecondaryProgress(0);
+                    handler.postDelayed(this, 10);
                 } else {
                     textView.setVisibility(View.GONE);
                     progressBar.setVisibility(View.GONE);
