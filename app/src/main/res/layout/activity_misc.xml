@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding">
+
+    <RatingBar
+        android:id="@+id/activity_misc_rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:stepSize="0.5"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/activity_misc_rating_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@id/activity_misc_rating_bar" />
+
+    <TextView
+        android:id="@+id/activity_misc_seek_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <SeekBar
+        android:id="@+id/activity_misc_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/activity_misc_seek_text_view"
+        android:max="100"
+        />
+</RelativeLayout>
