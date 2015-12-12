@@ -56,7 +56,7 @@ public class ImageAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder)convertView.getTag();
         }
-        
+
         viewHolder.imageView.setImageDrawable((Drawable) getItem(position));
         AbsListView.LayoutParams param = new AbsListView.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, 400);
