@@ -2,17 +2,13 @@ package com.example.shana.androidlesson3_widget.subpage;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.widget.Gallery;
 import android.widget.ImageSwitcher;
-import android.widget.ImageView;
-import android.widget.ViewSwitcher;
 
 import com.example.shana.androidlesson3_widget.R;
 import com.example.shana.androidlesson3_widget.adapter.ImageAdapter;
 import com.example.shana.androidlesson3_widget.utils.ConvertDpPx;
+import com.example.shana.androidlesson3_widget.utils.ImageSwitherUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,7 +25,7 @@ public class GalleryActivity extends Activity {
     ImageSwitcher imageSwitcher;
 
     @OnItemClick(R.id.activity_gallery_gallery)
-    void onGalleryItemClick(int position){
+    void updateImageSwitcher(int position){
         imageSwitcher.setImageResource((int) gallery.getItemIdAtPosition(position));
     }
     @Override
@@ -37,23 +33,9 @@ public class GalleryActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         ButterKnife.bind(this);
-        setupImageSwitcher();
+        ImageSwitherUtils.setupDefaultStyle(this, imageSwitcher);
         setupGallery();
-    }
-
-    private void setupImageSwitcher(){
-        imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
-            @Override
-            public View makeView() {
-                ImageView imageView = new ImageView(GalleryActivity.this);
-                imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                imageView.setLayoutParams(new ImageSwitcher.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-                return imageView;
-            }
-        });
-        imageSwitcher.setInAnimation(AnimationUtils.loadAnimation(this, android.R.anim.fade_in));
-        imageSwitcher.setOutAnimation(AnimationUtils.loadAnimation(this, android.R.anim.fade_out));
-        imageSwitcher.setImageResource(R.drawable.cat01);
+        updateImageSwitcher(0);
     }
 
     private void setupGallery(){

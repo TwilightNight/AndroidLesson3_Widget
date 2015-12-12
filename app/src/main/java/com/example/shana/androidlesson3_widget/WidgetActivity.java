@@ -18,6 +18,7 @@ import com.example.shana.androidlesson3_widget.subpage.PopupActivity;
 import com.example.shana.androidlesson3_widget.subpage.ProgressActivity;
 import com.example.shana.androidlesson3_widget.subpage.SpinnerActivity;
 import com.example.shana.androidlesson3_widget.subpage.VideoActivity;
+import com.example.shana.androidlesson3_widget.subpage.ViewPagerActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -39,6 +40,7 @@ public class WidgetActivity extends Activity {
             "GridView", GridActivity.class,
             "Video", VideoActivity.class,
             "Gallery(deprecated)", GalleryActivity.class,
+            "ViewPager", ViewPagerActivity.class,
             "Misc", MiscActivity.class
     };
 
