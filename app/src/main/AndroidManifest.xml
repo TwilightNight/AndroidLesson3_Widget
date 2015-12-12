@@ -23,6 +23,7 @@
         <activity android:name=".subpage.PopupActivity"/>
         <activity android:name=".subpage.ProgressActivity"/>
         <activity android:name=".subpage.SpinnerActivity"/>
+        <activity android:name=".subpage.ViewPagerActivity"/>
         <activity android:name=".subpage.VideoActivity"
             android:screenOrientation="landscape"/>
     </application>

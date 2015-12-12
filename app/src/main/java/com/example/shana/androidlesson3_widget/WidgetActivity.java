@@ -38,7 +38,7 @@ public class WidgetActivity extends Activity {
             "SpinnerSelect", SpinnerActivity.class,
             "GridView", GridActivity.class,
             "Video", VideoActivity.class,
-            "Gallery", GalleryActivity.class,
+            "Gallery(deprecated)", GalleryActivity.class,
             "Misc", MiscActivity.class
     };
 
