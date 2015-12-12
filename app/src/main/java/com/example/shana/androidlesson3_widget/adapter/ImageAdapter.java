@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
@@ -19,15 +18,19 @@ import butterknife.ButterKnife;
  */
 public class ImageAdapter extends BaseAdapter {
     private TypedArray resource;
+    private ViewGroup.LayoutParams layoutParams;
     static class ViewHolder {
         @Bind(R.id.adapter_image_image)
         ImageView imageView;
-        public ViewHolder(View view){
+
+        public ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }
     }
-    public ImageAdapter(TypedArray resource){
+
+    public ImageAdapter(TypedArray resource, ViewGroup.LayoutParams layoutParams) {
         this.resource = resource;
+        this.layoutParams = layoutParams;
     }
 
     @Override
@@ -42,7 +45,7 @@ public class ImageAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return resource.getResourceId(position % resource.length(), 0);
     }
 
     @Override
@@ -54,13 +57,11 @@ public class ImageAdapter extends BaseAdapter {
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
-            viewHolder = (ViewHolder)convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
         viewHolder.imageView.setImageDrawable((Drawable) getItem(position));
-        AbsListView.LayoutParams param = new AbsListView.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, 400);
-        convertView.setLayoutParams(param);
+        convertView.setLayoutParams(layoutParams);
         return convertView;
     }
 }
