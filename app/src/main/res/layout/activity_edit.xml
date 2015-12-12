@@ -7,15 +7,18 @@
     <EditText
         android:id="@+id/activity_edit_edit_text"
         android:layout_width="match_parent"
-        android:layout_height="60dp" />
+        android:layout_height="60dp"
+        android:singleLine="true"/>
     <AutoCompleteTextView
         android:id="@+id/activity_edit_auto_complete_text_view"
         android:layout_width="match_parent"
-        android:layout_height="60dp" />
+        android:layout_height="60dp"
+        android:singleLine="true"/>
     <MultiAutoCompleteTextView
         android:id="@+id/activity_edit_multi_auto_complete_text_view"
         android:layout_width="match_parent"
-        android:layout_height="60dp" />
+        android:layout_height="60dp"
+        android:singleLine="true"/>
     <Spinner
         android:id="@+id/activity_edit_spinner"
         android:layout_width="match_parent"

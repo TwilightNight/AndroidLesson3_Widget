@@ -38,6 +38,7 @@ public class HorizontalScrollViewActivity extends Activity {
         ButterKnife.bind(this);
         resource = getResources().obtainTypedArray(R.array.cat_array);
         ImageSwitcherUtils.setupDefaultStyle(this, imageSwitcher);
+        imageSwitcher.setImageDrawable(resource.getDrawable(0));
         setupHorizontalScrollView();
     }
 
