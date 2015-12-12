@@ -11,7 +11,7 @@ import android.widget.ViewSwitcher;
 /**
  * Created by shana on 2015/12/12.
  */
-public class ImageSwitherUtils {
+public class ImageSwitcherUtils {
     public static void setupDefaultStyle(final Context context, ImageSwitcher imageSwitcher){
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override

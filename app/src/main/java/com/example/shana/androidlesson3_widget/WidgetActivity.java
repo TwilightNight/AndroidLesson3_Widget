@@ -13,6 +13,7 @@ import com.example.shana.androidlesson3_widget.subpage.DateTimePickerActivity;
 import com.example.shana.androidlesson3_widget.subpage.EditActivity;
 import com.example.shana.androidlesson3_widget.subpage.GalleryActivity;
 import com.example.shana.androidlesson3_widget.subpage.GridActivity;
+import com.example.shana.androidlesson3_widget.subpage.HorizontalScrollViewActivity;
 import com.example.shana.androidlesson3_widget.subpage.MiscActivity;
 import com.example.shana.androidlesson3_widget.subpage.PopupActivity;
 import com.example.shana.androidlesson3_widget.subpage.ProgressActivity;
@@ -41,6 +42,7 @@ public class WidgetActivity extends Activity {
             "Video", VideoActivity.class,
             "Gallery(deprecated)", GalleryActivity.class,
             "ViewPager", ViewPagerActivity.class,
+            "HorizontalScrollView", HorizontalScrollViewActivity.class,
             "Misc", MiscActivity.class
     };
 

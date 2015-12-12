@@ -8,10 +8,10 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageSwitcher;
-import android.widget.ImageView;
 
 import com.example.shana.androidlesson3_widget.R;
-import com.example.shana.androidlesson3_widget.utils.ImageSwitherUtils;
+import com.example.shana.androidlesson3_widget.utils.ImageSwitcherUtils;
+import com.example.shana.androidlesson3_widget.utils.ResourceUtils;
 
 import java.util.ArrayList;
 
@@ -38,12 +38,12 @@ public class ViewPagerActivity extends Activity {
         setContentView(R.layout.activity_view_pager);
         ButterKnife.bind(this);
         resource = getResources().obtainTypedArray(R.array.cat_array);
-        ImageSwitherUtils.setupDefaultStyle(this, imageSwitcher);
+        ImageSwitcherUtils.setupDefaultStyle(this, imageSwitcher);
         setupViewPager();
     }
 
     private void setupViewPager(){
-        final ArrayList<View> imageList = getImageList();
+        final ArrayList<View> imageList = ResourceUtils.getImageList(this, resource);
         PagerAdapter adapter = new PagerAdapter() {
             @Override
             public int getCount() {
@@ -68,15 +68,5 @@ public class ViewPagerActivity extends Activity {
         };
         viewPager.setAdapter(adapter);
         updateImageSwitcher(0);
-    }
-
-    private ArrayList<View> getImageList(){
-        ArrayList<View> imageList = new ArrayList<>();
-        for (int i = 0; i < resource.length(); i++) {
-            ImageView image = new ImageView(this);
-            image.setImageDrawable(resource.getDrawable(i));
-            imageList.add(image);
-        }
-        return imageList;
     }
 }

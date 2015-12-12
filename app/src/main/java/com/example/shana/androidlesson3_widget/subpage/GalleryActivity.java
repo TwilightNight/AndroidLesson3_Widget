@@ -8,7 +8,7 @@ import android.widget.ImageSwitcher;
 import com.example.shana.androidlesson3_widget.R;
 import com.example.shana.androidlesson3_widget.adapter.ImageAdapter;
 import com.example.shana.androidlesson3_widget.utils.ConvertDpPx;
-import com.example.shana.androidlesson3_widget.utils.ImageSwitherUtils;
+import com.example.shana.androidlesson3_widget.utils.ImageSwitcherUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,7 +33,7 @@ public class GalleryActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         ButterKnife.bind(this);
-        ImageSwitherUtils.setupDefaultStyle(this, imageSwitcher);
+        ImageSwitcherUtils.setupDefaultStyle(this, imageSwitcher);
         setupGallery();
         updateImageSwitcher(0);
     }
