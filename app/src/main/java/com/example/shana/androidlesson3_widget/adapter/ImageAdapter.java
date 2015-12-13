@@ -52,7 +52,6 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            System.out.println("Create new view at " + position);
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_image, null);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);

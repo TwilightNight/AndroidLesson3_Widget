@@ -32,6 +32,6 @@ public class GridActivity extends Activity {
         setContentView(R.layout.activity_grid);
         ButterKnife.bind(this);
         gridView.setAdapter(new ImageAdapter(getResources().obtainTypedArray(R.array.cat_array), new AbsListView.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, (int) ConvertDpPx.convertDpToPixel(200.0f, this))));
+                ViewGroup.LayoutParams.MATCH_PARENT, ConvertDpPx.convertDpToPixel(200, this))));
     }
 }

@@ -40,6 +40,6 @@ public class GalleryActivity extends Activity {
 
     private void setupGallery(){
         gallery.setAdapter(new ImageAdapter(getResources().obtainTypedArray(R.array.cat_array), new Gallery.LayoutParams(
-                (int) ConvertDpPx.convertDpToPixel(100.0f, this), (int)ConvertDpPx.convertDpToPixel(100.0f, this))));
+                ConvertDpPx.convertDpToPixel(100, this), ConvertDpPx.convertDpToPixel(100, this))));
     }
 }

@@ -28,6 +28,10 @@ public class MiscActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_misc);
         ButterKnife.bind(this);
+        initWidget();
+    }
+
+    private void initWidget(){
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
@@ -52,6 +56,10 @@ public class MiscActivity extends Activity {
             }
         });
 
+        setInitValueForWidget();
+    }
+
+    private void setInitValueForWidget(){
         ratingBar.setRating(3);
         seekBar.setProgress(50);
     }

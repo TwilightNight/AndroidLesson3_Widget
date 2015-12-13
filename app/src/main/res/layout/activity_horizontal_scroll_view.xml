@@ -10,7 +10,7 @@
         android:layout_alignParentBottom="true">
 
         <LinearLayout
-            android:id="@+id/activity_horizontal_scroll_view_Shape"
+            android:id="@+id/activity_horizontal_scroll_view_Image_Scope"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="left|center_vertical"

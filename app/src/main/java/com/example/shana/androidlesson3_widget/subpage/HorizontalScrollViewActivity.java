@@ -24,10 +24,11 @@ import butterknife.ButterKnife;
  */
 public class HorizontalScrollViewActivity extends Activity {
     private TypedArray resource;
+    private int scrollXWhenTouchDown;
     @Bind(R.id.activity_horizontal_scroll_view_horizontal_scroll_view)
     HorizontalScrollView horizontalScrollView;
-    @Bind(R.id.activity_horizontal_scroll_view_Shape)
-    LinearLayout shape;
+    @Bind(R.id.activity_horizontal_scroll_view_Image_Scope)
+    LinearLayout imageScope;
     @Bind(R.id.activity_horizontal_scroll_view_ImageSwitcher)
     ImageSwitcher imageSwitcher;
 
@@ -44,26 +45,32 @@ public class HorizontalScrollViewActivity extends Activity {
 
     private void setupHorizontalScrollView() {
         ArrayList<View> imageList = ResourceUtils.getImageList(this, resource);
-        for (final View image : imageList) {
-            image.setTag(imageList.indexOf(image));
-            image.setLayoutParams(new LinearLayout.LayoutParams((int) ConvertDpPx.convertDpToPixel(100, this), (int) ConvertDpPx.convertDpToPixel(100, this)));
-            image.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    switch (event.getAction()) {
-                        case MotionEvent.ACTION_DOWN:
-                            shape.setTag(horizontalScrollView.getScrollX());
-                            break;
-                        case MotionEvent.ACTION_UP:
-                            if ((int)shape.getTag() <= horizontalScrollView.getScrollX() + 10 && (int)shape.getTag() >= horizontalScrollView.getScrollX() - 10) {
-                                imageSwitcher.setImageDrawable(resource.getDrawable((int)v.getTag()));
-                            }
-                            break;
-                    }
-                    return true;
-                }
-            });
-            shape.addView(image);
+        for (int indexOfImage = 0; indexOfImage < imageList.size(); indexOfImage++){
+            View imageView = imageList.get(indexOfImage);
+            imageView.setLayoutParams(new LinearLayout.LayoutParams((int) ConvertDpPx.convertDpToPixel(100, this), (int) ConvertDpPx.convertDpToPixel(100, this)));
+            viewSetClickEvent(indexOfImage, imageView);
+            imageScope.addView(imageView);
         }
+    }
+
+    private void viewSetClickEvent(int indexOfView, View view) {
+        view.setTag(indexOfView);
+        view.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View touchView, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        scrollXWhenTouchDown = horizontalScrollView.getScrollX();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        int scrollXWhenTouchUp = horizontalScrollView.getScrollX();
+                        if (scrollXWhenTouchDown < scrollXWhenTouchUp + 10 && scrollXWhenTouchDown > scrollXWhenTouchDown - 10) {
+                            imageSwitcher.setImageDrawable(resource.getDrawable((int)touchView.getTag()));
+                        }
+                        break;
+                }
+                return true;
+            }
+        });
     }
 }
