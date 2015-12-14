@@ -6,26 +6,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WidgetActivity">
+        <activity android:name=".activities.WidgetActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".subpage.ButtonActivity"/>
-        <activity android:name=".subpage.EditActivity"/>
-        <activity android:name=".subpage.ClockActivity"/>
-        <activity android:name=".subpage.ChronometerActivity"/>
-        <activity android:name=".subpage.DateTimePickerActivity"/>
-        <activity android:name=".subpage.GalleryActivity"/>
-        <activity android:name=".subpage.GridActivity"/>
-        <activity android:name=".subpage.MiscActivity"/>
-        <activity android:name=".subpage.PopupActivity"/>
-        <activity android:name=".subpage.ProgressActivity"/>
-        <activity android:name=".subpage.SpinnerActivity"/>
-        <activity android:name=".subpage.ViewPagerActivity"/>
-        <activity android:name=".subpage.HorizontalScrollViewActivity"/>
-        <activity android:name=".subpage.VideoActivity"
+        <activity android:name=".activities.subpage.ButtonActivity"/>
+        <activity android:name=".activities.subpage.EditActivity"/>
+        <activity android:name=".activities.subpage.ClockActivity"/>
+        <activity android:name=".activities.subpage.ChronometerActivity"/>
+        <activity android:name=".activities.subpage.DateTimePickerActivity"/>
+        <activity android:name=".activities.subpage.GalleryActivity"/>
+        <activity android:name=".activities.subpage.GridActivity"/>
+        <activity android:name=".activities.subpage.MiscActivity"/>
+        <activity android:name=".activities.subpage.PopupActivity"/>
+        <activity android:name=".activities.subpage.ProgressActivity"/>
+        <activity android:name=".activities.subpage.SpinnerActivity"/>
+        <activity android:name=".activities.subpage.ViewPagerActivity"/>
+        <activity android:name=".activities.subpage.HorizontalScrollViewActivity"/>
+        <activity android:name=".activities.subpage.VideoActivity"
             android:screenOrientation="landscape"/>
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>

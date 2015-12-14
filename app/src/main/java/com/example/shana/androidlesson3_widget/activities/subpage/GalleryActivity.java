@@ -1,4 +1,4 @@
-package com.example.shana.androidlesson3_widget.subpage;
+package com.example.shana.androidlesson3_widget.activities.subpage;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.widget.Gallery;
 import android.widget.ImageSwitcher;
 
 import com.example.shana.androidlesson3_widget.R;
-import com.example.shana.androidlesson3_widget.adapter.ImageAdapter;
+import com.example.shana.androidlesson3_widget.adapters.ImageAdapter;
 import com.example.shana.androidlesson3_widget.utils.ConvertDpPx;
 import com.example.shana.androidlesson3_widget.utils.ImageSwitcherUtils;
 

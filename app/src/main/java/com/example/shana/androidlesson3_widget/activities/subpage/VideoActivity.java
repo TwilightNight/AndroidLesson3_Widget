@@ -1,4 +1,4 @@
-package com.example.shana.androidlesson3_widget.subpage;
+package com.example.shana.androidlesson3_widget.activities.subpage;
 
 import android.Manifest;
 import android.app.Activity;

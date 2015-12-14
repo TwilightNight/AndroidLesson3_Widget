@@ -1,4 +1,4 @@
-package com.example.shana.androidlesson3_widget.adapter;
+package com.example.shana.androidlesson3_widget.adapters;
 
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;

@@ -1,4 +1,4 @@
-package com.example.shana.androidlesson3_widget;
+package com.example.shana.androidlesson3_widget.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,20 +6,21 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.shana.androidlesson3_widget.subpage.ButtonActivity;
-import com.example.shana.androidlesson3_widget.subpage.ChronometerActivity;
-import com.example.shana.androidlesson3_widget.subpage.ClockActivity;
-import com.example.shana.androidlesson3_widget.subpage.DateTimePickerActivity;
-import com.example.shana.androidlesson3_widget.subpage.EditActivity;
-import com.example.shana.androidlesson3_widget.subpage.GalleryActivity;
-import com.example.shana.androidlesson3_widget.subpage.GridActivity;
-import com.example.shana.androidlesson3_widget.subpage.HorizontalScrollViewActivity;
-import com.example.shana.androidlesson3_widget.subpage.MiscActivity;
-import com.example.shana.androidlesson3_widget.subpage.PopupActivity;
-import com.example.shana.androidlesson3_widget.subpage.ProgressActivity;
-import com.example.shana.androidlesson3_widget.subpage.SpinnerActivity;
-import com.example.shana.androidlesson3_widget.subpage.VideoActivity;
-import com.example.shana.androidlesson3_widget.subpage.ViewPagerActivity;
+import com.example.shana.androidlesson3_widget.R;
+import com.example.shana.androidlesson3_widget.activities.subpage.ButtonActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.ChronometerActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.ClockActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.DateTimePickerActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.EditActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.GalleryActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.GridActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.HorizontalScrollViewActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.MiscActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.PopupActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.ProgressActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.SpinnerActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.VideoActivity;
+import com.example.shana.androidlesson3_widget.activities.subpage.ViewPagerActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
